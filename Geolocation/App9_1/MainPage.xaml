@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             
+             x:Class="App9_1.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
+            <Label Text="9 Робота!" HorizontalTextAlignment="Center" TextColor="White" FontSize="6"/>
+        </Frame>
+       
+
+
+        <Button Text="Про мене" Clicked="MeClicked" />
+        
+        <Label x:Name="latitudeLabel" Text="Latitude: " />
+        <Label x:Name="longitudeLabel" Text="Longitude: " />
+        <Button Text="Моя локація" Clicked="OnGetLocationClicked" />
+
+
+        <Entry x:Name="latitudeEntry" Placeholder="Довгота" />
+        <Entry x:Name="longitudeEntry" Placeholder="Широта" />
+        <Button Text="Введена локація" Clicked="OnGetInsertedLocationClicked" />
+
+        <Entry x:Name="cityEntry" Placeholder="Введіть назву міста" />
+        <Button Text="Пошук" Clicked="SearchButton_Clicked" />
+
+        <maps:Map x:Name="map"  IsShowingUser="True" /> 
+
+        
+
+
+    </StackLayout>
+
+</ContentPage>

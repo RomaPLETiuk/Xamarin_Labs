@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9_1.Page1">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <!-- Додайте зображення та мітку для вмісту сповіщення -->
+            <Image x:Name="image" Aspect="AspectFit" HeightRequest="100"/>
+            <Label x:Name="messageLabel" Text="" HorizontalTextAlignment="Center" FontSize="25" TextColor="#007BFF"/>
+
+
+            <Label  Text="Самостійна робота"  FontSize="15" TextColor="#7444BF"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Ср_1" Clicked="S1Clicked" />
+                <Button Text="Ср_2" Clicked="S2Clicked" />
+                <Button Text="Ср_3" Clicked="S3Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
