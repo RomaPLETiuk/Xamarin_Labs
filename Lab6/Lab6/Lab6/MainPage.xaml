@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Lab6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Практичні роботи!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <!-- 
+        <Button Text="Додати книгу" Clicked="AddClicked"/>
+        <Button Text="Вибірка" Clicked="SelectClicked"/>
+        <Button Text="Всі книги" Clicked="SelectAllClicked"/>
+        <Button Text="прочитати файл" Clicked="ShowLabelClicked"/>
+
+
+        <Label x:Name="YourLabelName"
+       Text=""
+       HorizontalOptions="CenterAndExpand"
+       VerticalOptions="CenterAndExpand"
+       FontSize="16"
+       TextColor="Black"
+       />
+        -->
+
+        <!--   <Button Text="закінчується на 7" Clicked="ShowContactsButton_Clicked" />
+
+
+        <ListView x:Name="contactListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding DisplayName}"
+                          Detail="{Binding PhoneNumber}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> -->
+
+
+        <!-- 
+<StackLayout>
+   <Entry Placeholder="Введіть ім'я користувача" />
+   <Entry Placeholder="Введіть пароль" IsPassword="True" />
+</StackLayout> 
+-->
+
+
+        
+        
+        
+        <StackLayout>
+             <Label x:Name="locationLabel" />
+            
+            <Button Text="Get Location" Clicked="OnGetLocationClicked" />
+            <maps:Map x:Name="map"
+      ItemsSource="{Binding location}">
+                <maps:Map.ItemTemplate>
+                    <DataTemplate>
+                        <maps:Pin Position="{Binding Position}"
+                  Address="{Binding Address}"
+                  Label="{Binding Description}" />
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+            </maps:Map>
+
+
+            <!--  <Label x:Name="latitudeLabel" Text="Latitude: " />
+            <Label x:Name="longitudeLabel" Text="Longitude: " />
+            <Button Text="Get Location" Clicked="OnGetLocationClicked" /> -->
+        </StackLayout> 
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab6.SelectPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <ListView x:Name="BookListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" Detail="{Binding Year}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- Відображення відсотку -->
+            <Label x:Name="PercentageLabel" />
+
+            <Button Text="прочитати файл" Clicked="ShowLabelClicked"/>
+
+
+            <Label x:Name="YourLabelName"
+   Text=""
+   HorizontalOptions="CenterAndExpand"
+    VerticalOptions="CenterAndExpand"
+      FontSize="16"
+   TextColor="Black"
+     />
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
