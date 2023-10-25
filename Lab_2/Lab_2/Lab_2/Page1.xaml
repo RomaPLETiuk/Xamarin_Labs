@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_2.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Зміст файлу:" FontSize="Title" HorizontalOptions="Center" Margin="0,10,0,20" />
+
+            <ScrollView>
+                <Label x:Name="ContentLabel" FontSize="Medium" />
+            </ScrollView>
+
+            <Button Text="Повернутися назад" Clicked="OnBackButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

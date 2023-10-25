@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab_2.MainPage">
+  <ScrollView>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="3-4 Практична робота!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Frame BackgroundColor="Green" Padding="24" CornerRadius="0" Margin="30,10,30,0">
+            <StackLayout>
+                <Entry x:Name="NumberEntry" Placeholder="Введіть початок" Keyboard="Numeric" />
+                <Entry x:Name="NumberEntry2" Placeholder="Введіть кінець" Keyboard="Numeric" />
+                <Entry x:Name="NumberEntry3" Placeholder="Введіть крок" Keyboard="Numeric" />
+                <Button Text="Розрахувати" Clicked="CalculateButton_Clicked" Margin="0,10,0,0"/>
+                <Label x:Name="ResultLabel" FontSize="Title" TextColor="#2196F3" />
+                    <Button Text="Прочитати файл" Clicked="ReadFileButton_Clicked" Margin="0,10,0,0"/>
+                    <Button Text="Намалювати графік" Clicked="DrawGraphButton_Clicked" Margin="0,10,0,0"/>
+                </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="Salmon" Padding="24" CornerRadius="0" Margin="30,10,30,0">
+            <StackLayout>
+                <CheckBox x:Name="ShowImageCheckBox"  CheckedChanged="ShowImageCheckBox_CheckedChanged" />
+                <Label x:Name="ImageLabel" FontSize="Title" TextColor="White" IsVisible="False" Text="Плетюк Р. М. ІПЗ-21008б" />
+                <Image x:Name="SampleImage" Source="https://3dnews.ru/assets/external/illustrations/2020/01/28/1002443/ff1.jpg" IsVisible="False" />
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+  </ScrollView>
+
+</ContentPage>
